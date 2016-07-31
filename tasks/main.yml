@@ -1,0 +1,5 @@
+---
+# tasks file for get-url-ubuntu
+- name: install libcurl3
+  apt: name=libcurl3
+  become: "{{ get_url_nonroot }}"

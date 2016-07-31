@@ -1,0 +1,3 @@
+---
+# vars file for get-url-ubuntu
+get_url_nonroot: "{{ (ansible_env.HOME == '/root') | ternary('no', 'yes') }}"

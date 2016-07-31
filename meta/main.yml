@@ -1,0 +1,17 @@
+galaxy_info:
+  author: Suzuki Shunsuke
+  description: Install the dependendencies for the get_url module on Ubuntu
+  license: license (GPLv2, CC-BY, etc)
+  min_ansible_version: 1.2
+  github_branch: master
+
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+
+  galaxy_tags:
+  - get_url
+
+dependencies:
+- role: suzuki-shunsuke.apt
