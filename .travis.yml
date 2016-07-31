@@ -11,6 +11,8 @@ addons:
     packages:
     - python-pip
 
+before_install: cd tests
+
 install:
   # Install ansible
   - pip install ansible
@@ -19,11 +21,9 @@ install:
   - ansible --version
   - ansible-galaxy install -r roles.txt
 
-before_script: cd tests
-
 script:
   # Basic role syntax check
-  - ansible-playbook test.yml --syntax-check
+  - ansible-playbook test.yml
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
