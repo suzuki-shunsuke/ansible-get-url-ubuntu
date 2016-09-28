@@ -11,7 +11,6 @@ galaxy_info:
     - all
 
   galaxy_tags:
-  - get_url
+  - get-url
 
-dependencies:
-- role: suzuki-shunsuke.apt
+dependencies: []

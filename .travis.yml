@@ -2,29 +2,20 @@
 language: python
 python: "2.7"
 
-# Use the new container infrastructure
 sudo: required
 dist: trusty
 
-# Install ansible
 addons:
   apt:
+    sources:
+    - sourceline: ppa:ansible/ansible
     packages:
-    - python-pip
+    - ansible
 
-before_install: cd tests
-
-install:
-  # Install ansible
-  - pip install ansible
-
-  # Check ansible version
-  - ansible --version
-  - ansible-galaxy install -r roles.txt
+before_script: cd tests
 
 script:
-  # Basic role syntax check
-  - ansible-playbook test.yml
+- ansible-playbook test.yml
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
